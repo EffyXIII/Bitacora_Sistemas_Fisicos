@@ -41,3 +41,39 @@ $: stack(
  
  // note("f#3*2 f#3*2").s("piano").release(2)
 )
+
+
+// version 2
+
+$: stack(
+
+  // Bajo
+  note("<[c3*4 c3*4]@2 [d3*4]>")
+    .release("<1.8 2.2>")
+    .gain(0.9),
+
+  // Capa armónica
+  note("d#4,d#5")
+    .release(2)
+    .pan(-0.25)
+    .gain(0.6),
+
+  note("g#2,g#3")
+    .release(2)
+    .pan(0.25)
+    .gain(0.65),
+
+  // Melodía
+  note("<[c4,g4,c5,d#4]@1.5 [c4,g4,c5]@0.5 [d4,g4,a#3,a5]>")
+    .clip(1)
+    .release(0.05)
+    .gain(1)
+    .lpf(sine.range(1200,3200).slow(8)),
+
+  // Pad
+  note("<[g#2,g#3]@2 [a#2,a#3]>")
+    .release(2.4)
+    .gain(0.5)
+
+)
+.s("piano")
