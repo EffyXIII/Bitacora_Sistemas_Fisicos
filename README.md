@@ -12,27 +12,6 @@ yo creo q quedo fino
 ahora vamos con la melodia, espero no morir en el intento
 
 la cosa no va mal, me esta gustando, pero tengo un gran problema, hacer las siguientes secuencias de acordes, y no tenog mucho tiempo
-### el codigo va asi:
-
-setcps(119/60/4)
-
-$: stack(
-  s("hh*2 hh*2 hh*2 hh*2"),
-  s("bd*2 ~ ~ ~"),
-  s("~ ~ sd ~")
-)
-
-$: stack(
-  note("d2*2 d2*2").s("piano").release(2),
-  note("a2*2 a2*2").s("piano").release(2),
-
-  note("c4").s("piano").release(2),
-  note("g4").s("piano").release(2),
-  note ("c5").s("piano").release(2),
-  note ("d#4").s("piano").release(2)
- 
- // note("f#3*2 f#3*2").s("piano").release(2)
-)
 
 
 va mejorando el asunto y la optimizacion del codigo, ahora el problema es que los acordes no suenan en los tiempos que deseo y no encuentro como arreglarlo
@@ -40,38 +19,7 @@ va mejorando el asunto y la optimizacion del codigo, ahora el problema es que lo
 
 
 LOGRE LO QUE QUERIA. AQUI EL CODIGO
-setcps(119/60/4)
 
-$: stack(
-  s("hh*2 hh*2 hh*2 hh*2"),
-  s("bd*2 ~ ~ ~"),
-  s("~ ~ sd ~")
-)
-
-$: stack(
-  note("c3*2 c3*2").s("piano").release(2),
-  note("c4*2 c4*2").s("piano").release(2),
-
-
-
-// INTENTO BUENO. PORFIN
-  note("<[c4, g4, c5, d#4] [[c4, g4, c5] [d4, g4, a#3, a5]]>").s("piano").release(2),
-  
-  
-  //intento 3
-  ~note("<[[[c4, g4, c5, d#4]]] [[c4, g4, c5] [d4, g4, a#3, a5]]>").s("piano").release(2),
-  
-  //intento 2
-  ~note("[c4, g4, c5, d#4] [c4, g4, c5] [d4, g4, a#3, a5]").s("piano").release(2),
-
-  //intento 1 de acordes
-  ~note("c4").s("piano").release(2),
-  ~note("g4").s("piano").release(2),
-  ~note ("c5").s("piano").release(2),
-  ~note ("d#4").s("piano").release(2)
- 
- // note("f#3*2 f#3*2").s("piano").release(2)
-)
 
 
 He estado progresando mucho en lo que busco y siento que cada vez se hacerca mas, lastimosamente dude que de el tiempo para poder avanzarlo y mejorarlo mucho mas. lo di todo
