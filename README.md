@@ -33,3 +33,42 @@ $: stack(
  
  // note("f#3*2 f#3*2").s("piano").release(2)
 )
+
+
+va mejorando el asunto y la optimizacion del codigo, ahora el problema es que los acordes no suenan en los tiempos que deseo y no encuentro como arreglarlo
+
+
+
+LOGRE LO QUE QUERIA. AQUI EL CODIGO
+setcps(119/60/4)
+
+$: stack(
+  s("hh*2 hh*2 hh*2 hh*2"),
+  s("bd*2 ~ ~ ~"),
+  s("~ ~ sd ~")
+)
+
+$: stack(
+  note("c3*2 c3*2").s("piano").release(2),
+  note("c4*2 c4*2").s("piano").release(2),
+
+
+
+// INTENTO BUENO. PORFIN
+  note("<[c4, g4, c5, d#4] [[c4, g4, c5] [d4, g4, a#3, a5]]>").s("piano").release(2),
+  
+  
+  //intento 3
+  ~note("<[[[c4, g4, c5, d#4]]] [[c4, g4, c5] [d4, g4, a#3, a5]]>").s("piano").release(2),
+  
+  //intento 2
+  ~note("[c4, g4, c5, d#4] [c4, g4, c5] [d4, g4, a#3, a5]").s("piano").release(2),
+
+  //intento 1 de acordes
+  ~note("c4").s("piano").release(2),
+  ~note("g4").s("piano").release(2),
+  ~note ("c5").s("piano").release(2),
+  ~note ("d#4").s("piano").release(2)
+ 
+ // note("f#3*2 f#3*2").s("piano").release(2)
+)
