@@ -10,3 +10,26 @@ empece con el beat y tuve varias dificultades a la hora de separar los sonidos e
 yo creo q quedo fino
 
 ahora vamos con la melodia, espero no morir en el intento
+
+la cosa no va mal, me esta gustando, pero tengo un gran problema, hacer las siguientes secuencias de acordes, y no tenog mucho tiempo
+### el codigo va asi:
+
+setcps(119/60/4)
+
+$: stack(
+  s("hh*2 hh*2 hh*2 hh*2"),
+  s("bd*2 ~ ~ ~"),
+  s("~ ~ sd ~")
+)
+
+$: stack(
+  note("d2*2 d2*2").s("piano").release(2),
+  note("a2*2 a2*2").s("piano").release(2),
+
+  note("c4").s("piano").release(2),
+  note("g4").s("piano").release(2),
+  note ("c5").s("piano").release(2),
+  note ("d#4").s("piano").release(2)
+ 
+ // note("f#3*2 f#3*2").s("piano").release(2)
+)
