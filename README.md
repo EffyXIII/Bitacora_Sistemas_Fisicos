@@ -72,3 +72,51 @@ $: stack(
  
  // note("f#3*2 f#3*2").s("piano").release(2)
 )
+
+
+He estado progresando mucho en lo que busco y siento que cada vez se hacerca mas, lastimosamente dude que de el tiempo para poder avanzarlo y mejorarlo mucho mas. lo di todo
+al final el codigo se queda asi
+
+setcps(119/60/4)
+
+$: stack(
+  s("hh*2 hh*2 hh*2 hh*2"),
+  s("bd*2 ~ ~ ~"),
+  s("~ ~ sd ~")
+)
+
+$: stack(
+  note("<[c3*3 c3*3]@1.5 [[c3*2][d3*2]]>").s("piano").release(2),
+  note("<[c4*3 c4*3]@1.5 [[c4*2][d4*2]]>").s("piano").release(2),
+
+  note("d#4, d#5").s("piano").release(2),
+  note("g#2, g#3").s("piano").release(2),
+
+
+//secuencia principal
+  note("<[c4, g4, c5, d#4]@1.5 [[c4, g4, c5] [d4, g4, a#3, a5]]>").s("piano").clip(1).release(0.05),
+
+//Acordes de apoyo 
+  note("<[g#2, g#3]@1.5 [[~] [A#2, a#3]]>").s("piano").release(2), // Volumen más suave para que quede de fondo
+
+
+
+  
+// INTENTO BUENO. PORFIN, pero vamos a probar algo mas
+  //note("<[c4, g4, c5, d#4] [[c4, g4, c5] [d4, g4, a#3, a5, a#5]]>").s("piano").release(2),
+  
+  
+  //intento 3
+  //note("<[[[c4, g4, c5, d#4]]] [[c4, g4, c5] [d4, g4, a#3, a5]]>").s("piano").release(2),
+  
+  //intento 2
+  //note("[c4, g4, c5, d#4] [c4, g4, c5] [d4, g4, a#3, a5]").s("piano").release(2),
+
+  //intento 1 de acordes
+  //note("c4").s("piano").release(2),
+  //note("g4").s("piano").release(2),
+  //note ("c5").s("piano").release(2),
+  //note ("d#4").s("piano").release(2)
+ 
+ // note("f#3*2 f#3*2").s("piano").release(2)
+)
